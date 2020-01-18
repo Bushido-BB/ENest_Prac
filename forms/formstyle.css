@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out 0s !important;
+}
+
+input[name="pass"]{
+    margin-bottom: 4px;
+}
+
+.input, select, button{
+    background-color: teal;
+    color: white;
+    border-radius: 0px;
+}
+button{
+    border: 2px solid rgb(0, 182, 182);
+}
+.input::placeholder{
+    color: white;
+}
+.input:focus, .input:hover, .input:focus::placeholder{
+    border-right: 20px solid rgb(0, 182, 182);
+    color: rgb(0, 182, 182);
+}
+button:focus, button:hover{
+    color: white;
+    background-color:teal;
+}
+form{
+    padding-left: 5%;
+}
+legend{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: teal;
+    width:200px;
+}
+fieldset{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+select option, .option{
+    background-color: white;
+}
+select:hover{
+    background-color: teal;
+    color: white;   
+}
+label{
+    padding-top:5px;
+    color: rgb(0, 131, 131);
+}

@@ -1,0 +1,67 @@
+<!-- legend : sign up
+
+title
+first name last name
+email
+ph no
+pass 
+conf pass
+country dropdown
+sign up reset button -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./formstyle.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="row col-sm-8 justify-content-center">
+        <fieldset class="col-sm-6 justify-content-center">
+            <legend> Sign Up</legend>
+            <form action="" class="justify-content-center">
+                <div class="form-group col-sm-12 row">
+                    <input class="input form-control col-sm-12" type="text" placeholder="Title" name="title" />
+                </div>
+                <div class="form-group col-sm-12 justify-content-between row">
+                    <input class="input form-control col-sm-6" type="text" placeholder="First Name" name="fname" />
+                    <input class="input form-control col-sm-6" type="text" placeholder="Last Name" name="lname" />
+                </div>
+                <div class="form-group col-sm-12 row">
+                    <input class="input form-control col-sm-12" type="email" name="email" placeholder="Email" />
+                </div>
+                <div class="form-group col-sm-12 row justify-content-between">
+                    <label for="phone" class="align-bottom col-sm-2">+91</label>
+                    <input class="input form-control col-sm-10" type="text" name="phone" placeholder="xxxxx-xxxxx" />
+                </div>
+                <div class="form-group col-sm-12 row">
+                    <input class="input form-control col-sm-12" type="password" placeholder="Password" name="pass" />
+                    <input class="input form-control col-sm-12" type="password" placeholder="Confirm Password"
+                        name="confpass" />
+                </div>
+                <div class="form-group col-sm-12 row">
+                    <select name="country" id="" class="form-control col-sm-12">
+                        <option class="option" value="" disabled selected>Country</option class="option">
+                        <option class="option" value="India">India</option> class="option"
+                        <option class="option" value="Pakistan">Pakistan</option> class="option"
+                        <option class="option" value="Sri Lanka">Sri Lanka</option> class="option"
+                    </select>
+                </div>
+                <div class="form-group col-sm-12 justify-content-between row">
+                    <button class="form-control col-sm-5">Submit</button>
+                    <button class="form-control col-sm-5">Reset</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
