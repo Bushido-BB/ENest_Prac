@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch DOM</title>
+</head>
+<body>
+    <div id="my-div-id" class="my-div-class">
+        HELLO THERE
+    </div>
+    <span id="my-span-id"></span>
+</body>
+<script>
+    "strict mode"
+    var _id = document.getElementById("my-div-id").id
+    var _class = document.getElementsByClassName("my-div-class")[0].className
+    var _tag = document.getElementsByTagName("div")[0].tagName
+    
+    var str = `ID: ${_id} <br> Class: ${_class} <br> Tag: ${_tag}`
+    document.getElementById("my-span-id").innerHTML = str
+</script>
+</html>

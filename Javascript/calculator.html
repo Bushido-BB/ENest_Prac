@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+       body > div{
+            width: 200px;
+            height:200px;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="display" value="" type="text"/>
+        <br/>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">7</button>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">8</button>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">9</button>
+        <br/>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">4</button>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">5</button>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">6</button>
+        <br/>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">1</button>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">2</button>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">3</button>
+        <br/>
+        <button type="button" onCLick="inputNumber(this.innerHTML)">0</button>
+        <button type="button" onCLick="operate(this.innerHTML)">+</button>
+        <button type="button" onCLick="operate(this.innerHTML)">-</button>
+        <button type="button" onCLick="operate(this.innerHTML)">*</button>
+        <button type="button" onCLick="operate(this.innerHTML)">/</button>
+    </div>
+    <script>
+        "strict mode"
+        let first = 0
+        let second = 0
+        let clear_flag = false
+        let operators = []
+        var display = document.getElementById('display')
+
+        var inputNumber = (num)=>{
+            if(clear_flag){
+                display.value = ""
+                clear_flag = false
+                // first = parseInt(display.value.substring(0,display.value.length))
+            }
+            display.value += num
+        }
+        var operate =(opr)=>{
+            let str = display.value.substring(0,display.value.length)
+            operators.push(opr)
+            if(!first){
+                first = parseInt(str)
+                clear_flag = true
+            }else if(!second){
+                second = parseInt(str)
+                clear_flag = true
+            }
+            if(operators.length == 2){
+                let answer = 0
+                switch(operators.shift()){
+                    case "+":
+                        answer = first + second
+                        break
+                    case "-":
+                        answer = first - second
+                        break
+                    case "*":
+                        answer = first * second
+                        break
+                    case "/":
+                        answer = first / second
+                        break
+                }
+                display.value = answer
+                first = answer
+                second = undefined
+            }
+        }
+    </script>
+</body>
+</html>

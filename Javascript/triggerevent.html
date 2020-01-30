@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trigger</title>
+    <style>
+        body{
+            transition: background-color 0.3s ease 0s;
+        }
+        #box{
+            width: 100px;
+            height:100px;
+            margin: 50px auto;
+            background-color: orangered;
+            border-radius: 100%;
+            transition: border-radius 0.5s ease 0s;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box" onClick="toggleShape()"></div>
+    <script>
+        var box = document.getElementById("box")
+        var toggleShape = ()=>{
+            box.style.borderRadius == '100%' ?
+                (box.style.borderRadius = '10px') | (document.body.style.backgroundColor = "white") :
+                (box.style.borderRadius = '100%') | (document.body.style.backgroundColor = "orange")
+        }
+        toggleShape()
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Read JSON</title>
+    <style>
+        td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" onchange="readFile(event)"/>
+    <br/>
+    <table></table>
+    <script>
+        var table = document.querySelector("table")
+        var _content
+
+        var readFile = (event)=>{
+            var file = event.target.files[0]
+            if(file){
+                let reader = new FileReader()
+                reader.onloadend = (e)=>{
+                    if(e.target.readyState == FileReader.DONE){
+                        _content = JSON.parse(e.target.result)
+                        displayRecords()
+                    }
+                }
+                let blob = file.slice(0, file.size)
+                reader.readAsBinaryString(blob)
+            }
+        }
+
+        var displayRecords = ()=>{
+            for(student of _content){
+                let tr = document.createElement("tr")
+                tr.innerHTML = `<td>${student.name}</td>
+                                <td>${student.class}</td>
+                                <td>${student.marks}</tr>`
+                table.appendChild(tr)
+            }
+        }
+
+        //JSON File Format Used
+        // [
+        //     {
+        //         "name": "Habla",
+        //         "class": "Maaka",
+        //         "marks": 80
+        //     },{
+        //         "name": "Bikku",
+        //         "class": "Shiushu",
+        //         "marks": 50
+        //     },{
+        //         "name": "Gard",
+        //         "class": "Pla",
+        //         "marks": 60
+        //     }
+        // ]
+    </script>
+</body>
+</html>

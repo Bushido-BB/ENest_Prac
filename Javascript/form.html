@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        /* body > form:nth-child(2){
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text"/><br/>
+        <input type="password"/><br/>
+        <button type="submit" onclick="nextForm(event)">Submit</button>
+    </form>
+    <form id="form2" action="" onsubmit="return checkForm(this)">
+        <input name="name" type="text"/><br/>
+        <input name="email" type="text"/><br/>
+        <input name="phone" type="text"/><br/>
+        <input name="password" type="password"/>
+        <input name="confpass" type="password"/><br/>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        var nextForm = (e)=>{
+            e.preventDefault()
+            document.getElementsByTagName("form")[1].style.display = "block"
+        }
+        //-----------------------------------
+        var form2 = document.getElementById("form2")
+        var checkForm = (e)=>{
+            var messages =  []
+            for(let i = 0; i < form2.length ; i++){
+                console.log("LOOP")
+                if(form2[i].name == "name"){
+                    if(form2[i].value == "" || form2[i].value == null){
+                        messages.push([form2[i], "Empty Name"])
+                    }
+                }else if(form2[i].name == "email"){
+                    if(!/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(form2[i].value)){
+                        messages.push([form2[i], "Invalid Email"])
+                    }
+                }else if(form2[i].name == "phone"){
+                    if(form2[i].value == "" || form2[i].value == null){
+                        messages.push([form2[i], "Empty phone"])
+                    }
+                }
+            }
+            if(messages){
+                mesg = messages.pop()
+                if(mesg){
+                    alert(mesg[1])
+                    mesg[0].focus()
+                }else{
+                    return true
+                }
+            }
+            return false
+        }
+    </script>
+</body>
+</html>

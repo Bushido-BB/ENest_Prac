@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Validations</title>
+</head>
+<body>
+    <form action="" validate = "true">
+        <input type="email"/>
+        <br/><br/>
+        <input type="text" id="emailfield" onkeyup="return emailValidate()"/>
+        <br/><br/>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        var emailfield = document.getElementById('emailfield')
+        var email_pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+        emailValidate = ()=>{
+            email_pattern.test(emailfield.value) == true ?
+            emailfield.style.borderColor = "green" :  emailfield.style.borderColor = "red"
+            return email_pattern.test(emailfield.value)
+        }
+    </script>
+</body>
+</html>

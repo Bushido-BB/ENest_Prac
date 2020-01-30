@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies</title>
+</head>
+<body>
+    <form action="" onsubmit="saveCookie(this)">
+        <input type="text"/>
+        <br/>
+        <input type="password"/>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        var form = document.querySelector("form")
+        var _cookies = []
+        window.addEventListener("load", ()=>{
+            _cookies = document.cookie.split(";")
+            for(cookie of _cookies){
+                if(cookie.indexOf("name") > -1){
+                    let values = cookie.split("=")
+                    form[0].value = values[1]
+                }else if(cookie.indexOf("password") > -1){
+                    let values = cookie.split("=")
+                    form[1].value = values[1]
+                }
+            }
+        })
+        var saveCookie = (_this)=>{
+            document.cookie = "name="+_this[0].value+";"
+            document.cookie = "password="+_this[1].value+";"
+        }
+    </script>
+</body>
+</html>

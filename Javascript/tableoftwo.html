@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table of Two</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector("div")
+        let x = 1
+        while(x <= 10){
+            div.innerHTML += `2 x ${x} = ${2*x} <br>`
+            x++
+        }
+
+        let _string = "4"
+        let _number = 6
+        console.log(_string + _number, "\n", parseInt(_string)+_number)
+    </script>
+</body>
+</html>

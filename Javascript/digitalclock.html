@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock</title>
+    <style>
+        @font-face{
+            font-family: 'digital';
+            src : url('./Open24DisplaySt.ttf')
+        }
+        span{
+            padding:4px;
+            font-family: 'digital';
+            font-size: xx-large;
+            border: 1px ridge green;
+            color: green;
+            background-color: black;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <span></span>
+    <script>
+        var clock = document.querySelector("span")
+        var timer = setInterval(() => {
+            let date = new Date()
+            clock.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+            delete date
+        }, 1);
+    </script>
+</body>
+</html>
