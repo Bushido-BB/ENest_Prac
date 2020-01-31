@@ -6,201 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TEST</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <style>
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        a:hover,.toggler-icon:hover{
-            color: #34bb9d;
-        }
-        nav, .header{
-            background-color: #333d53;
 
-        }
-        .top {
-            background-color: #00c89e;
-        }
-        .star {
-            font-size: xx-large;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            color: white;
-        }
-
-        .star>.bars {
-            display: flex;
-            justify-self: center;
-            width: 100px;
-            height: 1px;
-            border: 2px solid white;
-            border-radius: 2px;
-        }
-
-        .showboat {
-            height: 400px;
-            background-color: #00c89e;
-        }
-
-        .showboat>.image {
-            height: 165px;
-            width: 165px;
-            background-color: lawngreen;
-        }
-
-        .showboat h6>span:nth-child(1)::after {
-            content: " -";
-        }
-
-        .showboat h6>span:nth-child(3)::before {
-            content: "- ";
-        }
-
-        .portfolio {
-            height: fit-content;
-            color: #333d53
-        }
-        .portfolio > .star{
-            color: #333d53
-        }
-        .portfolio > .star>.bars {
-            border: 2px solid #333d53;
-        }
-
-        .portfolio-items {
-            height: fit-content;
-            width: 100%;
-        }
-        .portfolio-items>div {
-            border: 5px solid white;
-            height: 200px;
-            width: 200px;
-        }
-        .portfolio-items > div:nth-child(1){
-            background-color: #be375c;
-        }
-        .portfolio-items > div:nth-child(2){
-            background-color: #13a2ba;
-        }
-        .portfolio-items > div:nth-child(3){
-            background-color: #1a1714;
-        }
-        .portfolio-items > div:nth-child(4){
-            background-color: #3473c3;
-        }
-        .portfolio-items > div:nth-child(5){
-            background-color: #4000b8;
-        }
-        .portfolio-items > div:nth-child(6){
-            background-color: #cab19e;
-        }
-        img{
-            background-color: white;
-            object-fit: cover;
-            object-position: center center;
-            
-            width:150px;
-            height:150px;
-        }
-        .portfolio-items > div:nth-child(1) > img{
-            background-color: #34bb9d;
-        }
-        .portfolio-items > div:nth-child(2) > img{
-            background-color: #df5337;
-        }
-        .portfolio-items > div:nth-child(3) > img{
-            background-color: #e7f3ef;
-        }
-        .portfolio-items > div:nth-child(4) > img{
-            background-color: #d77523;
-        }
-        .portfolio-items > div:nth-child(5) > img{
-            background-color: #e9d732;
-        }
-        .portfolio-items > div:nth-child(6) > img{
-            background-color: #374b5e;
-        }
-        .about {
-            background-color: #00c89e;
-        }
-
-        .contact {
-            color: #333d53;
-        }
-        .contact button{
-            background-color: #00c89e;
-            border: none;
-        }
-        .contact button:hover{
-            background-color: teal;
-        }
-        /* _____________________________________________________ */
-        .input {
-            width: 50%;
-            margin: 0 auto;
-            height: 40px;
-            /* font-family: Lato;
-          font-size: 1.4em; */
-        }
-        .input input,
-        .input textarea {
-            width: 400px;
-            /* margin-top: 80px; */
-            /* font-family: Lato;
-            font-size: 1.8em; */
-            background-color: transparent;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            outline: none;
-            color: rgb(141, 141, 141);
-            padding-left: 10px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.068);
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-        .input input:focus+label,
-        .input textarea:focus+label {
-            top: -50px;
-            font-size: 1em;
-            transition: all .3s;
-        }
-        .input label {
-            display: inline-block;
-            position: relative;
-            left: 10px;
-            top: -30px;
-            font-size: 1.2em;
-            cursor: text;
-            color: rgb(170, 170, 170);
-            transition: all .3s;
-        }
-        textarea[placeholder] {
-            color: rgb(97, 97, 97);
-            font-size: 1.2em;
-        }
-        /* _____________________________________________________ */
-        .bottom{
-            background-color:#333d53;
-            height:auto;
-            color: white;
-        }
-        /* .bottom  > .info{
-            
-        } */
-        .social-links > span{
-            border: 2px solid white;
-        }
-        .footer{
-            background-color: #232633;
-        }
-    </style>
 </head>
 
 <body>
@@ -210,7 +24,8 @@
                 <nav class="container navbar navbar-expand-lg text-light">
                     <a class="navbar-brand col-6 text-center text-uppercase"><strong>Demo Template</strong></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav">
-                        <span class="toggler-icon fa fa-bars text-light"></span>
+                        <span class="toggler-icon text-light text-uppercase ">menu <span
+                                class="fa fa-bars"></span></span>
                     </button>
                     <div class="collapse navbar-collapse col-6 mx-auto" id="myNav">
                         <div class="navbar-nav mx-auto">
@@ -227,9 +42,10 @@
                     </div>
                 </nav>
             </div>
-            <div class="showboat d-flex flex-column align-items-center justify-content-center text-light h-100 p-5 my-5">
+            <div
+                class="showboat d-flex flex-column align-items-center justify-content-center text-light h-100 p-5 my-5">
                 <div class="image rounded-circle p-3"></div>
-                <h1 class="text-uppercase p-3">demo template</h1>
+                <h1 class="text-center text-uppercase p-3">demo template</h1>
                 <div class="star pb-4">
                     <div class="bars"></div>
                     <div class="fa fa-star px-2"></div>
@@ -242,35 +58,36 @@
                 </h6>
             </div>
         </div>
-        <div class="portfolio d-flex flex-column align-items-center justify-content-center h-100">
-            <h1 class="text-uppercase">portfolio</h1>
-            <div class="star my-5">
+        <div class="portfolio container d-flex flex-column align-items-center justify-content-center h-100">
+            <h1 class="text-uppercase text-center">portfolio</h1>
+            <div class="star my-3">
                 <div class="bars"></div>
                 <div class="fa fa-star px-2"></div>
                 <div class="bars"></div>
             </div>
-            <div class="container d-flex align-items-center justify-content-center flex-column">
-            <div class="portfolio-items row col-md-8 mb-5 pb-5">
-                <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
-                    <img src="" class="rounded-circle" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
-                    <img src="" class="rounded-circle" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
-                    <img src="" class="rounded-circle" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
-                    <img src="" class="rounded-circle" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
-                    <img src="" class="rounded-circle" alt="">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
-                    <img src="" class="rounded-circle" alt="">
+            <div class="container-full d-flex align-items-center justify-content-center flex-column">
+                <div class="portfolio-items row col-md-10 mb-5 pb-5">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="" class="rounded-circle" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="" class="rounded-circle" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="" class="rounded-circle" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="" class="rounded-circle" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="" class="rounded-circle" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto d-flex align-items-center justify-content-center">
+                        <img src="" class="rounded-circle" alt="">
+                    </div>
                 </div>
             </div>
-        </div></div>
+        </div>
         <div class="about d-flex flex-column align-items-center justify-content-center h-100 p-5 text-light">
             <div class="container d-flex align-items-center justify-content-center flex-column">
                 <h2 class="text-uppercase">about</h2>
@@ -278,37 +95,41 @@
                     <div class="bars"></div>
                 </div>
                 <div class="row col-md-6 m-3">
-                    <div class="col-md-5 m-1 mx-auto">Reach for your audience on every browser without adding a line of code. Bootstrap keeps your codebase lightweight and fast-loading for your website to stay crisp</div>
-                    <div class="col-md-5 m-1 mx-auto">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</div>
+                    <div class="col-md-5 m-1 mx-auto">Reach for your audience on every browser without adding a line of
+                        code. Bootstrap keeps your codebase lightweight and fast-loading for your website to stay crisp
+                    </div>
+                    <div class="col-md-5 m-1 mx-auto">You can create your own custom avatar for the masthead, change the
+                        icon in the dividers, and add your email address to the contact form to make it fully
+                        functional!</div>
                 </div>
                 <button class="btn btn-outline-light mb-3"><span class="fa fa-download"></span> Free Download</button>
             </div>
         </div>
         <div class="contact d-flex flex-column align-items-center justify-content-center h-100 m-5">
-            <h1 class="text-uppercase">contact me</h1>
-            <div class="star">
+            <h1 class="text-uppercase text-center">contact me</h1>
+            <div class="star pb-4">
                 <div class="bars"></div>
                 <div class="fa fa-star px-2"></div>
                 <div class="bars"></div>
             </div>
             <form action="" class="form">
-                <div class="form-input my-2 row input">
+                <div class="form-input mx-auto my-2 row input">
                     <input type="text" name="name" />
                     <label for="name">Name</label>
                 </div>
-                <div class="form-input my-2 row input">
+                <div class="form-input mx-auto my-2 row input">
                     <input type="text" name="email" />
                     <label for="email">Email Address</label>
                 </div>
-                <div class="form-input my-2 row input">
+                <div class="form-input mx-auto my-2 row input">
                     <input type="text" name="phone" />
                     <label for="phone">Phone Number</label>
                 </div>
-                <div class="form-input my-2 row input">
+                <div class="form-input mx-auto my-2 row input">
                     <textarea name="mesg" placeholder="Message"></textarea>
                 </div>
-                <div class="form-input input mt-5 ml-1 row">
-                    <button class="btn btn-primary mx-auto">Send</button>
+                <div class="form-input input mt-5 pull-left ml-1 row">
+                    <button class="btn btn-primary">Send</button>
                 </div>
             </form>
         </div>
@@ -322,10 +143,10 @@
                 <div class="around-web mx-auto col-lg-4 col-md-12 col-sm-12 text-center py-3">
                     <h5 class="text-uppercase">around the web</h5>
                     <div class="social-links">
-                        <span class="fa fa-facebook rounded-circle p-2 m-1"></span>
-                        <span class="fa fa-twitter rounded-circle p-2 m-1"></span>
-                        <span class="fa fa-linkedin rounded-circle p-2 m-1"></span>
-                        <span class="fa fa-dribbble rounded-circle p-2 m-1"></span>
+                        <span class="fa fa-facebook rounded-circle p-3 m-1"></span>
+                        <span class="fa fa-twitter rounded-circle p-3 m-1"></span>
+                        <span class="fa fa-linkedin rounded-circle p-3 m-1"></span>
+                        <span class="fa fa-dribbble rounded-circle p-3 m-1"></span>
                     </div>
                 </div>
                 <div class="about-website mx-auto col-lg-4 col-md-12 col-sm-12 text-center py-3">
@@ -334,7 +155,7 @@
                 </div>
             </div>
             <div class="footer text-center h-25 p-3">
-                Copyright &copy; Your Website 2019              
+                Copyright &copy; Your Website 2019
             </div>
         </div>
     </div>
