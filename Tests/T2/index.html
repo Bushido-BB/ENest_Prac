@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./style/template.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="text-uppercase website-wrapper container-full">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top m-0 p-0">
+                            <!-- Brand -->
+      <a class="navbar-brand p-0" href="#">
+        <img src="" alt="" class="brand-logo__image bg-dark" />
+        <span class="Brand-logo__text mx-1 font-weight-bold">Template</span>
+      </a>
+                            <!-- BRAND END -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars p-1"></i></span>
+      </button>
+                            <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto nav-pills">
+          <li class="nav-item px-3 py-0 m-0">
+            <a class="nav-link text-right py-3 text-dark" href="#demo">Home</a>
+          </li>
+          <li class="nav-item px-3 py-0">
+            <a class="nav-link text-right py-3 text-dark" href="#services">Services</a>
+          </li>
+          <li class="nav-item px-3 py-0">
+            <a class="nav-link text-right py-3 text-dark" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item px-3 py-0">
+            <a class="nav-link text-right py-3 text-dark" href="#team">Team</a>
+          </li>
+          <li class="nav-item px-3 py-0">
+            <a class="nav-link text-right py-3 text-dark" href="#external">External</a>
+          </li>
+          <li class="nav-item px-3 py-0">
+            <a class="nav-link text-right py-3 text-dark" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+                            <!-- Navbar links END-->
+    </nav>
+                          <!-- CAROUSEL -->
+    <div id="demo" class="carousel slide mb-5" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+                            <!-- CAROUSEL WINDOW -->
+      <div class="carousel-inner">
+                              <!-- CAROUSEL SLIDES -->
+        <div class="carousel-item active">
+          <img src="./images/newyork.jpg" alt="New York">
+          <div class="carousel-caption d-none d-lg-block">
+            <h3 class="carousel-container__text--big font-weight-bold text-center">
+              <span class="text-center">Responsive HTML CSS</span>
+            </h3>
+            <p class="w-25 mx-auto">Download and use it for your site</p>
+            <button class="btn carousel-caption__button">Go To Portfolio</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/newyork.jpg" alt="London">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="carousel-container__text--big font-weight-bold text-center">
+              <span class="text-center">Responsive HTML CSS</span>
+            </h3>
+            <p class="w-25 mx-auto">Download and use it for your site</p>
+            <button class="btn carousel-caption__button">Go To Portfolio</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/newyork.jpg" alt="Tokyo">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="carousel-container__text--big font-weight-bold text-center">
+              <span class="text-center">Responsive HTML CSS</span>
+            </h3>
+            <p class="w-25 mx-auto">Download and use it for your site</p>
+            <button class="btn carousel-caption__button">Go To Portfolio</button>
+          </div>
+        </div>
+                              <!-- CAROUSEL SLIDES END-->
+      </div>
+    </div>
+                          <!-- SERVICES -->
+    <div id="services" class="services-container col-md-12 my-5 pt-5">
+      <h3 class="services-container__text--big font-weight-bold text-center">
+        <span class="text-center">Our Services</span>
+      </h3>
+      <div class="services-container__text--small text-center text-dark">
+        <span>We design mobile-first websites for you</span>
+      </div>
+                            <!-- SERVICES IMAGES -->
+      <div class="services-images container mx-auto row my-5 d-flex justify-content-center">
+        <div class="services-images__image--cyan col-lg-3 col-lg-3 col-md-6 col-sm-6">
+          <i class="material-icons text-center">insert_chart</i>
+        </div>
+        <div class="services-images__image--orange col-lg-3 col-md-6 col-sm-6">
+          <i class="material-icons text-center">send</i>
+        </div>
+        <div class="services-images__image--blue col-lg-3 col-md-6 col-sm-6">
+          <i class="material-icons text-center">account_balance</i>
+        </div>
+        <div class="services-images__image--green col-lg-3 col-md-6 col-sm-6">
+          <i class="material-icons text-center">free_breakfast</i>
+        </div>
+                              <!-- SERVICES IMAGES END-->
+      </div>
+    </div>
+                          <!-- PORTFOLIO -->
+    <div id="portfolio" class="portfolio-container container my-5 pt-5">
+      <h3 class="portfolio-container__text--big font-weight-bold text-center">
+        <span class="text-center">Our Portfolio</span>
+      </h3>
+      <div class="portfolio-container__text--small text-center text-dark">
+        <span>We design mobile-first websites for you</span>
+      </div>
+                            <!-- PORTFOLIO IMAGES -->
+      <div class="portfolio-images col-md-12 row mx-auto my-5">
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container col-lg-3 col-md-6 col-sm-7 p-0">
+        <img src="./images/Funny-Sheep-Facts-1200x800.jpg" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Urban</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Asperioes something something long text and stuff
+              </div>
+              <button class="portfolio-container__search btn btn-light rounded-circle">
+                <i class="material-icons">search</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+                            <!-- PORTFOLIO IMAGES END -->
+    </div>
+                          <!-- TEAM -->
+    <div id="team" class="team-container container my-5 pt-5">
+      <h3 class="team-container__text--big font-weight-bold text-center">
+        <span class="text-center">Our Team</span>
+      </h3>
+      <div class="team-container__text--small text-center text-dark">
+        Our people are very united for your success
+      </div>
+      <div class="team-images col-md-12 row mx-auto my-5 ">
+                              <!-- TEAM IMAGES -->
+        <div class="portfolio-image-container rounded-circle col-lg-3 col-md-6 col-sm-6 p-0">
+          <img src="./images/img_avatar.png" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Cindy</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Developer</div>
+              <div class="d-flex flex-row">
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-facebook"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-twitter"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container rounded-circle col-lg-3 col-md-6 col-sm-6 p-0">
+          <img src="./images/img_avatar.png" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Cindy</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Developer</div>
+              <div class="d-flex flex-row">
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-facebook"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-twitter"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container rounded-circle col-lg-3 col-md-6 col-sm-6 p-0">
+          <img src="./images/img_avatar.png" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Cindy</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Developer</div>
+              <div class="d-flex flex-row">
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-facebook"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-twitter"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-image-container rounded-circle col-lg-3 col-md-6 col-sm-6 p-0">
+          <img src="./images/img_avatar.png" alt="Avatar" class="portfolio-image-container__image">
+          <div class="portfolio-image-container__overlay">
+            <div class="portfolio-image-container__text">
+              <div class="portfolio-image-container__text--big">
+                <span class="border-bottom">Cindy</span>
+              </div>
+              <div class="portfolio-image-container__text--small">Developer</div>
+              <div class="d-flex flex-row">
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-facebook"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-twitter"></i>
+                </button>
+                <button class="portfolio-container__search m-1 btn btn-light rounded-circle">
+                  <i class="fa fa-linkedin"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+                              <!-- TEAM IMAGES END -->
+      </div>
+                            <!-- TEAM SKILLS -->
+      <div class="skills-container py-5">
+        <div class="skills-container__text--big text-center">
+          <span class="font-italic">Design Skills</span>
+        </div>
+        <div class="skills-container__text--small">
+          <p class="text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="skills-content mx-auto col-lg-12 row my-4">
+          <div class="skills-content__left col-md-7 mr-5 text-secondary my-3">
+            <div class="row text-lowercase">
+              Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis
+              lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse
+              pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut
+              varius tincidunt libero. Phasellus dolor.
+            </div>
+            <div class="row text-lowercase mt-3">
+              Please visit Too CSS to see collections of free HTML CSS templates for your websites. Etiam tincidunt,
+              magna eu elementum tristique, sapien nisl venenatis lacus, nec sagittis lectus dui eget lorem. Donec in
+              tempus mi. Aenean egestas interdum dolor, et mollis lectus consequat. Mauris ullamcorper, felis sit amet
+              gravida malesuada, nisi sem rhoncus massa, non tempor est erat sit amet diam.
+            </div>
+          </div>
+
+          <div class="skills-content__right col-md-4 my-3">
+            <div class="progress-container">
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold px-3 py-0 my-0"
+                  style="width:90%">
+                  PHOTOSHOP 90%</div>
+              </div>
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:80%">
+                  HTML/CSS 80%</div>
+              </div>
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:70%">
+                  DEVELOPMENT 70%</div>
+              </div>
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:80%">
+                  MARKETING 80%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                            <!-- TEAM SKILLS END-->
+    </div>
+                          <!-- CONTACT -->
+    <div id="contact" class="contact-container container my-5">
+      <h3 class="contact-container__text--big font-weight-bold text-center">
+        <span class="text-center">Contact</span>
+      </h3>
+      <div class="contact-container__text--small text-center text-dark">
+        <span>Send a message to us</span>
+      </div>
+      <div class="contact-content mx-auto col-md-12 row my-4">
+        <div class="contact-content__left col-md-7 pr-2 text-secondary my-3">
+          <div class="row text-lowercase">
+            Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed
+            aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent
+            adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.
+            Cras id dui.
+          </div>
+          <div class="row text-lowercase mt-3">
+            Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent
+            congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan
+            cursus velit.
+          </div>
+          <div class="row mt-3">
+            <div class="contact-row__text col-md-12 pl-0">Phone: 456-789-0660</div>
+            <div class="contact-row__text col-md-12 pl-0">Email:
+              <span class="contact-row__text--orange">info@123company.com</span></div>
+            <div class="contact-row__text col-md-12 pl-0">Address: McDonald Street, San Francisco</div>
+          </div>
+        </div>
+        <div class="contact-content__right col-md-5 my-3">
+          <form action="" class="form-container">
+            <input class="form-container__item col-md-12 my-1" type="text" placeholder="Your Name">
+            <input class="form-container__item col-md-12 my-1" type="text" placeholder="Your Email">
+            <input class="form-container__item col-md-12 my-1" type="text" placeholder="Subject">
+            <textarea class="form-container__item col-md-12 my-1" name="" placeholder="Message" rows="5"></textarea>
+                                  <!-- change button type to submit in the end -->
+            <button class="form-container__item col-md-12 my-1 btn rounded-0" type="button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+                          <!-- FOOTER -->
+    <footer class="col-md-12 mt-5">
+      <div class="footer-content p-1">
+        <div class="footer-items pt-2 col-md-3 d-flex flex-row justify-content-center mx-auto">
+          <div class="footer-items__social text-center rounded-circle m-1">
+            <i class="fa fa-facebook"></i>
+          </div>
+          <div class="footer-items__social text-center rounded-circle m-1">
+            <i class="fa fa-twitter"></i>
+          </div>
+          <div class="footer-items__social text-center rounded-circle m-1">
+            <i class="fa fa-dribbble"></i>
+          </div>
+          <div class="footer-items__social text-center rounded-circle m-1">
+            <i class="fa fa-linkedin"></i>
+          </div>
+        </div>
+        <div class="footer-items text-center p-1">
+          <span>Copyright Company Name. Design: Bootstrap</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

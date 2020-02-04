@@ -1,0 +1,162 @@
+/* ----------------------GLOBAL SETTINGS---------------------- */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    position:relative;
+}
+a{
+    color: inherit;
+}
+a:hover{
+    color:inherit
+}
+/* ----------------------NAVBAR---------------------- */
+.brand-logo__image{
+    height:65px;
+    width:100px;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link{
+    background:none;
+    border-top: 2px solid orangered;
+    border-radius: 0px;
+}
+.navbar-brand{
+    color: orangered;
+}
+.navbar-toggler-icon{
+    background-color: orangered;
+    color: white;
+}
+button{
+    background-color: orangered;
+    color: white;
+}
+/* -----------------------CAROUSEL EDITS----------------------- */
+.carousel-inner img {
+    width:100%;
+    height:100%;
+    filter: brightness(50%);
+}
+.carousel-container__text--big > span{
+    border-bottom: 1px solid white;
+}
+/* ----------------------UNDERLINE CODE------------------------ */
+.services-container__text--big > span,
+.portfolio-container__text--big > span,
+.team-container__text--big > span,
+.contact-container__text--big > span{
+    border-bottom: 1px solid black;
+}
+/* ----------------------IMAGE PADDINGS--------------------- */
+.services-images > div,
+.portfolio-image-container{
+    /* background-color: wheat; */
+    position: relative;
+    /* min-width:360px !important; */
+    /* height:250px; */
+    border: 10px solid white;
+}
+/* ------------------------OVERLAY & IMAGES--------------------- */
+.portfolio-image-container{
+    overflow: hidden;
+    /* background-color: blue; */
+}
+.portfolio-image-container__image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.portfolio-image-container__overlay{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    /* border:10px solid white; */
+    background-color: orangered;
+}
+.portfolio-image-container:hover .portfolio-image-container__overlay{
+    opacity: 1;
+}
+.portfolio-image-container__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+.portfolio-image-container__text--big{
+    font-size: 1.5em;
+}
+.portfolio-image-container__text--small{
+    font-size: 1em;
+}
+.portfolio-container__search i{
+    color: orangered;
+    font-size: 0.9em;
+}
+/* -----------------------SERVICES----------------------- */
+.services-images i{
+    width:100%;
+    height:100%;
+    line-height: 5em;
+    color:white;
+
+    font-size: 3em;
+}
+.services-images__image--cyan{
+    background-color: teal;
+}
+.services-images__image--orange{
+    background-color: orangered;
+}
+.services-images__image--blue{
+    background-color: royalblue;
+}
+.services-images__image--green{
+    background-color: limegreen;
+}
+/* -----------------------CONTACT----------------------- */
+.skills-content > div,
+.contact-content > div{
+    /* height: ; */
+    font-size: small;
+}
+.contact-row__text--orange{
+    color: orangered;
+}
+/* -----------------------TEAM----------------------- */
+.progress{
+    border-radius: 0px;
+    height:30px;
+}
+.progress-bar{
+    background-color: orangered;
+}
+/* -----------------------FOOTER----------------------- */
+footer{
+    /* height: 70px; */
+    background-color: black;
+    color: white;
+}
+.footer-items__social {
+    border: 2px solid white;
+    width:30px;
+    height:30px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.footer-items__social:hover{
+    color: black;
+    background-color: white;
+}

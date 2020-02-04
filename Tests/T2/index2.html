@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Faltu Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+      .navbar-brand{
+    color: orangered;
+}
+.carousel-inner img {
+    width:100%;
+    height:100%;
+    filter: brightness(50%);
+}
+button{
+    background-color: orangered;
+    color: white;
+}
+.carousel-container__text--big > span{
+    border-bottom: 1px solid white;
+}
+.services-container__text--big > span,
+.portfolio-container__text--big > span,
+.team-container__text--big > span,
+.contact-container__text--big > span{
+    border-bottom: 1px solid black;
+}
+.services-images > div,
+.portfolio-images__image,
+.team-images__image{
+    /* background-color: wheat; */
+    height:250px;
+    border: 10px solid white;
+}
+.portfolio-images__image,
+.team-images__image{
+    background-color: blue;
+}
+.services-images i{
+    width:100%;
+    height:100%;
+    line-height: 5em;
+    color:white;
+
+    font-size: 3em;
+}
+.services-images__image--cyan{
+    background-color: teal !important;
+}
+.services-images__image--orange{
+    background-color: orangered;
+}
+.services-images__image--blue{
+    background-color: royalblue;
+}
+.services-images__image--green{
+    background-color: limegreen;
+}
+.skills-content > div,
+.contact-content > div{
+    height: 350px;
+    font-size: small;
+}
+.progress{
+    border-radius: 0px;
+    height:30px;
+}
+.progress-bar{
+    background-color: orangered;
+}
+.contact-row__text--orange{
+    color: orangered;
+}
+footer{
+    height: 70px;
+    background-color: black;
+    color: white
+}
+.footer-items__social i{
+    border: 2px solid white;
+    width:25px;
+    height:25px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="website-wrapper container-full">
+    <nav class="navbar navbar-expand-md bg-light">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="" alt="Brand Logo" class="" />
+        <span class="Brand-logo__text m-3 display-4">Template</span>
+      </a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse " id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item p-4">
+            <a class="nav-link text-dark" href="#">Home</a>
+          </li>
+          <li class="nav-item p-4">
+            <a class="nav-link text-dark" href="#">Services</a>
+          </li>
+          <li class="nav-item p-4">
+            <a class="nav-link text-dark" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item p-4">
+            <a class="nav-link text-dark" href="#">Team</a>
+          </li>
+          <li class="nav-item p-4">
+            <a class="nav-link text-dark" href="#">External</a>
+          </li>
+          <li class="nav-item p-4">
+            <a class="nav-link text-dark" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/313032.jpg" alt="Los Angeles" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3 class="carousel-container__text--big font-weight-bold text-center">
+              <span class="text-center">Our carousel</span>
+            </h3>
+            <p class="w-25 mx-auto">We had such a great time in LA!</p>
+            <button class="btn carousel-caption__button">Go To Portfolio</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/313032.jpg" alt="Chicago" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3 class="carousel-container__text--big font-weight-bold text-center">
+              <span class="text-center">Our carousel</span>
+            </h3>
+            <p class="w-25 mx-auto">Thank you, Chicago!</p>
+            <button class="btn carousel-caption__button">Go To Portfolio</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/313032.jpg" alt="New York" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3 class="carousel-container__text--big font-weight-bold text-center">
+              <span class="text-center">Our carousel</span>
+            </h3>
+            <p class="w-25 mx-auto">We love the Big Apple!</p>
+            <button class="btn carousel-caption__button">Go To Portfolio</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services-container col-md-12">
+      <h3 class="services-container__text--big font-weight-bold text-center">
+        <span class="text-center">Our Services</span>
+      </h3>
+      <div class="services-container__text--small text-center text-dark">
+        <span>We design mobile-first websites for you</span>
+      </div>
+      <div class="services-images container mx-auto row">
+        <div class="services-images__image--cyan col-md-3">
+          <i class="material-icons text-center">insert_chart</i>
+        </div>
+        <div class="services-images__image--orange col-md-3">
+          <i class="material-icons text-center">send</i>
+        </div>
+        <div class="services-images__image--blue col-md-3">
+          <i class="material-icons text-center">account_balance</i>
+        </div>
+        <div class="services-images__image--green col-md-3">
+          <i class="material-icons text-center">free_breakfast</i>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-container container">
+      <h3 class="portfolio-container__text--big font-weight-bold text-center">
+        <!-- REMOVE TEXT-CENTER FROM HERE ^ -->
+        <span class="text-center">Our Portfolio</span>
+      </h3>
+      <div class="portfolio-container__text--small text-center text-dark">
+        <span>We design mobile-first websites for you</span>
+      </div>
+      <div class="portfolio-images col-md-12 row mx-auto">
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+        <div class="portfolio-images__image col-md-3"></div>
+      </div>
+    </div>
+    <div class="team-container container">
+      <h3 class="team-container__text--big font-weight-bold text-center">
+        <span class="text-center">Our Team</span>
+      </h3>
+      <div class="team-container__text--small text-center text-dark">
+        Our people are very united for your success
+      </div>
+      <div class="team-images col-md-12 row mx-auto">
+        <div class="team-images__image col-md-3"></div>
+        <div class="team-images__image col-md-3"></div>
+        <div class="team-images__image col-md-3"></div>
+        <div class="team-images__image col-md-3"></div>
+      </div>
+      <div class="skills-container">
+        <div class="skills-container__text--big text-center">
+          <span class="font-italic">Design Skills</span>
+        </div>
+        <div class="skills-container__text--small">
+          <p class="text-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="skills-content mx-auto col-md-12 row">
+          <div class="skills-content__left col-md-7 mr-5 text-secondary">
+            <div class="row">
+              Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis
+              lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse
+              pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut
+              varius tincidunt libero. Phasellus dolor.
+            </div>
+            <div class="row mt-3">
+              Please visit Too CSS to see collections of free HTML CSS templates for your websites. Etiam tincidunt,
+              magna eu elementum tristique, sapien nisl venenatis lacus, nec sagittis lectus dui eget lorem. Donec in
+              tempus mi. Aenean egestas interdum dolor, et mollis lectus consequat. Mauris ullamcorper, felis sit amet
+              gravida malesuada, nisi sem rhoncus massa, non tempor est erat sit amet diam.
+            </div>
+          </div>
+          <div class="skills-content__right col-md-4">
+            <div class="progress-container">
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:90%">
+                  PHOTOSHOP 90%</div>
+              </div>
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:80%">
+                  HTML/CSS 80%</div>
+              </div>
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:70%">
+                  DEVELOPMENT 70%</div>
+              </div>
+              <div class="progress m-2">
+                <div class="progress-bar progress-container__bar text-left font-weight-bold p-3" style="width:80%">
+                  MARKETING 80%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-container container">
+      <h3 class="portfolio-container__text--big font-weight-bold text-center">
+        <!-- REMOVE TEXT-CENTER FROM HERE ^ -->
+        <span class="text-center">Contact</span>
+      </h3>
+      <div class="portfolio-container__text--small text-center text-dark">
+        <span>Send a message to us</span>
+      </div>
+      <div class="contact-content mx-auto col-md-12 row">
+        <div class="contact-content__left col-md-7 pr-2 text-secondary">
+          <div class="row">
+            Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui.
+          </div>
+          <div class="row mt-3">
+            Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit.
+          </div>
+          <div class="row mt-3">
+            <div class="contact-row__text col-md-12 pl-0">Phone: 456-789-0660</div>
+            <div class="contact-row__text col-md-12 pl-0">Email: 
+              <span class="contact-row__text--orange">info@123company.com</span></div>
+            <div class="contact-row__text col-md-12 pl-0">Address: McDonald Street, San Francisco</div>
+          </div>
+        </div>
+        <div class="contact-content__right col-md-5 ">
+          <form action="" class="form-container">
+            <input class="form-container__item col-md-12 my-1" type="text" placeholder="Your Name">
+            <input class="form-container__item col-md-12 my-1" type="text" placeholder="Your Email">
+            <input class="form-container__item col-md-12 my-1" type="text" placeholder="Subject">
+            <textarea class="form-container__item col-md-12 my-1" name=""  placeholder="Message" rows="5"></textarea>
+            <!-- change button type to submit in the end -->
+            <button class="form-container__item col-md-12 my-1 btn rounded-0" type="button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-items pt-2 col-md-2 d-flex flex-row justify-content-around mx-auto">
+          <div class="footer-items__social p-1">
+            <i class="fa fa-facebook rounded-circle"></i>
+          </div>
+          <div class="footer-items__social p-1">
+            <i class="fa fa-twitter rounded-circle"></i>
+          </div>
+          <div class="footer-items__social p-1">
+            <i class="fa fa-dribbble rounded-circle"></i>
+          </div>
+          <div class="footer-items__social p-1">
+            <i class="fa fa-linkedin rounded-circle"></i>
+          </div>
+        </div>
+        <div class="footer-items">
+          <span>Copyright Company Name. Design: Bootstrap</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
