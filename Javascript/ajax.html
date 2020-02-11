@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+</head>
+<body>
+    <div id="page"></div>
+    <table id="table"></table>
+    <button type="button" onclick="loadAjax()">Click ME</button>
+    <script>
+      var table = document.getElementById("table")
+        loadAjax =()=>{
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                let object = JSON.parse(this.responseText)
+                for(person in object){
+                  let entry = document.createElement("tr")
+                  entry.innerHTML =  `<td>${object[person].name}</td>
+                                      <td>${object[person].class}</td>
+                                      <td>${object[person].marks}</td>`
+                  table.appendChild(entry)
+                }
+                // object.data.forEach(person => {
+                  // let entry = document.createElement("tr")
+                  // entry.innerHTML =  `<td>${person.name}</td>
+                  //                     <td>${person.class}</td>
+                  //                     <td>${person.marks}</td>`
+                  // table.appendChild(entry)
+                // })
+              }
+            };
+            xhttp.open("GET", "http://192.168.0.109:8081/posts", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
