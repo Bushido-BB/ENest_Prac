@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        table td{
+            border: 1px solid black;
+        }
+        form > div {
+            margin: 3px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <!-- FIRST NAME -->
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" onBlur="validate(this)"/>
+        </div>
+        <div>
+            <!-- LAST NAME -->
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" onBlur="validate(this)">
+        </div>
+        <div>
+            <!-- EMAIL -->
+            <label for="email">Email</label>
+            <input type="email" name="email" onBlur="validate(this)">
+        </div>
+        <div>
+            <!-- PHONE -->
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" onBlur="validate(this)">
+        </div>
+        <div>
+            <!-- DATE OF BIRTH -->
+            <label for="date">Date</label>
+            <input name="date" type="date" onBlur="validate(this)">
+        </div>
+        <div>
+            <!-- COUNTRY -->
+            <select name="country" id="country_id" onchange="selectCountry()" onBlur="validate(this)">
+                <!-- "India", "America", "Japan", "Australia", "Canada"/ -->
+                <option value="" disabled selected>Country</option>
+                <option value="America">America</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+        <div>
+            <!-- STATE -->
+            <select name="state" id="state_id" onBlur="validate(this)">
+                <option value="" disabled selected>State</option>
+            </select>
+        </div>
+        <div>
+            <!-- GENDER -->
+            <label for="gender">Gender</label>
+            <input type="radio" value="male" name="gender">Male
+            <input type="radio" value="female" name="gender">Female
+        </div>
+        <div>
+            <!-- HOBBIES -->
+            <label for="hobbies"></label>
+            <input type="checkbox" name="reading" value="reading">Reading
+            <input type="checkbox" name="listening" value="listening">Listening
+            <input type="checkbox" name="others" value="others">Others
+        </div>
+        <div>
+            <!-- EDUCATION -->
+            <!-- <label for="education">Education</label> -->
+            <!-- <input name="education" id="education" list="education">
+            <datalist id="education">YOO
+                <option value="">HEHE</option>
+                <option value="">HAHA</option>
+            </datalist> -->
+            <textarea name="education" placeholder="education" cols="30" rows="10" onBlur="validate(this)">
+            </textarea>
+        </div>
+        <div>
+            <button type="button" onClick="setUsers(this.form)" name="add">Add</button>
+        </div>
+        <div>
+            <!-- TABLE -->
+            <table>
+                <thead>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>DOB</td>
+                        <td>Country</td>
+                        <td>State</td>
+                        <td>Gender</td>
+                        <td>Hobbies</td>
+                        <td>Education</td>
+                        <td>Action</td>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <!-- BUTTONS -->
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
