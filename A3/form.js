@@ -154,8 +154,7 @@ validate = (id)=>{
             break                                                                      
     }
     id.parentNode.lastChild.textContent = mesg?mesg:undefined
-    // return mesg?false:true
-    return true
+    return mesg?false:true
 }
 validateFull = (elem)=>{
     let validate_flag = false
