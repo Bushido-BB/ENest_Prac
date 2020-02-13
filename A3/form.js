@@ -12,7 +12,6 @@ var states = {
 }
 //-----------------TEMPRARY-----------------
 selectCountry = ()=>{
-    console.log("Fired")
     let state_box = document.getElementById("state_id")
     let country_box = document.getElementById("country_id")
     state_box.innerHTML = `<option value="" disabled selected>State</option>`
@@ -34,7 +33,14 @@ getUserData = (elem)=>{
     elem.reading.checked?user.hobbies.push(elem.reading.value):null
     elem.listening.checked?user.hobbies.push(elem.listening.value):null
     elem.others.checked?user.hobbies.push(elem.others.value):null
-    user.education = elem.education.value
+    let options = []
+    let options_list = elem.education.options
+    for(opt of options_list){
+        if(opt.selected){
+            options.push(opt.value)
+        }
+    }
+    user.education = options.join()
 }
 setUserData =(elem)=>{
     elem.firstname.value = user.firstname
@@ -52,7 +58,13 @@ setUserData =(elem)=>{
     user.hobbies.forEach(element => {
         elem[`${element}`].checked = true
     })
-    elem.education.value = user.education
+    let edu = elem.education.options
+    let options_list = user.education.split(',')
+    for(opt of edu){
+        if(options_list.includes(opt.value)){
+            opt.selected = true
+        }
+    }
 }
 setUsers = (elem)=>{
     getUserData(elem)
@@ -66,7 +78,6 @@ setUsers = (elem)=>{
     }
 }
 updateTable = ()=>{
-    console.log(users)
     document.querySelector("tbody").innerHTML = ""
     for(_user of users){
         let entry = document.createElement("tr")
@@ -109,7 +120,7 @@ validate = (id)=>{
             if(!/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(value))
                 mesg = "Invalid Email"
             break
-        case "phone":
+        case "phone":    
             if(!/^\d{5}[.-]\d{5}$/gm.test(value))
                 mesg = "Enter in xxxxx-xxxxx format"
             break
@@ -126,16 +137,25 @@ validate = (id)=>{
                 mesg = "Choose a state"
             break
         case "gender":
-            if(!value)
-                mesg = "Select gender"
+            mesg = "Select gender"
+            document.getElementsByName("gender").forEach(element => {
+                if(element.checked){
+                    mesg = ""
+                }
+            });
             break
         case "education":
-            if(!value.trim())
+            let options = []
+            for(opt of id.options){
+                opt.selected?options.push(opt.value):null
+            }
+            if(options.length == 0)
                 mesg = "Enter your qualifications"
-            break                                                                                       
+            break                                                                      
     }
     id.parentNode.lastChild.textContent = mesg?mesg:undefined
-    return mesg?false:true
+    // return mesg?false:true
+    return true
 }
 validateFull = (elem)=>{
     let validate_flag = false
@@ -200,3 +220,21 @@ window.addEventListener("load", ()=>{
     Object.seal(user)
     document.getElementById("country_id").addEventListener("change", selectCountry())
 })
+
+uploadUsers = ()=>{
+    let packet = Array.from(users)
+    packet.forEach((elem, ind)=>{
+        packet[ind] = elem[1]
+    })
+    console.log(JSON.stringify(packet))
+    var messenger = new XMLHttpRequest();
+    messenger.onreadystatechange = ()=>{
+      if (this.readyState == 4 && this.status == 200) {
+        alert("File Sent!")
+      }
+    };
+    messenger.open("POST", "http://192.168.0.109:8081/posts/10", true)
+    messenger.setRequestHeader("Content-Type", "application/json")
+    messenger.setRequestHeader("Access-Control-Allow-Origin", "*")
+    messenger.send(JSON.stringify(packet));
+}

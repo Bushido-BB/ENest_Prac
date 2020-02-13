@@ -20,26 +20,31 @@
             <!-- FIRST NAME -->
             <label for="firstname">First Name</label>
             <input type="text" name="firstname" onBlur="validate(this)"/>
+            <span></span>
         </div>
         <div>
             <!-- LAST NAME -->
             <label for="lastname">Last Name</label>
             <input type="text" name="lastname" onBlur="validate(this)">
+            <span></span>
         </div>
         <div>
             <!-- EMAIL -->
             <label for="email">Email</label>
             <input type="email" name="email" onBlur="validate(this)">
+            <span></span>
         </div>
         <div>
             <!-- PHONE -->
             <label for="phone">Phone</label>
             <input type="text" name="phone" onBlur="validate(this)">
+            <span></span>
         </div>
         <div>
             <!-- DATE OF BIRTH -->
             <label for="date">Date</label>
             <input name="date" type="date" onBlur="validate(this)">
+            <span></span>
         </div>
         <div>
             <!-- COUNTRY -->
@@ -52,18 +57,21 @@
                 <option value="India">India</option>
                 <option value="Japan">Japan</option>
             </select>
+            <span></span>
         </div>
         <div>
             <!-- STATE -->
             <select name="state" id="state_id" onBlur="validate(this)">
                 <option value="" disabled selected>State</option>
             </select>
+            <span></span>
         </div>
         <div>
             <!-- GENDER -->
             <label for="gender">Gender</label>
-            <input type="radio" value="male" name="gender">Male
-            <input type="radio" value="female" name="gender">Female
+            <input type="radio" value="male" name="gender" onBlur="validate(this)">Male
+            <input type="radio" value="female" name="gender" onBlur="validate(this)">Female
+            <span></span>
         </div>
         <div>
             <!-- HOBBIES -->
@@ -71,6 +79,7 @@
             <input type="checkbox" name="reading" value="reading">Reading
             <input type="checkbox" name="listening" value="listening">Listening
             <input type="checkbox" name="others" value="others">Others
+            <span></span>
         </div>
         <div>
             <!-- EDUCATION -->
@@ -80,8 +89,19 @@
                 <option value="">HEHE</option>
                 <option value="">HAHA</option>
             </datalist> -->
-            <textarea name="education" placeholder="education" cols="30" rows="10" onBlur="validate(this)">
-            </textarea>
+            <select name="education" multiple onBlur="validate(this)">
+                <option value="BA">BA</option>
+                <option value="BCA">BCA</option>
+                <option value="BSC">BSC</option>
+                <option value="BTECH">BTECH</option>
+                <option value="BENGG">BENGG</option>
+                <option value="BALLB">BALLB</option>
+                <option value="BED">BED</option>
+                <option value="BCOM">BCOM</option>
+            </select>
+            <!-- <textarea name="education" placeholder="education" cols="30" rows="10" onBlur="validate(this)">
+            </textarea> -->
+            <span></span>
         </div>
         <div>
             <button type="button" onClick="setUsers(this.form)" name="add">Add</button>
@@ -110,7 +130,7 @@
         <div>
             <!-- BUTTONS -->
             <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
+            <button type="button" onClick="uploadUsers()">Submit</button>
         </div>
     </form>
     <script src="form.js"></script>
