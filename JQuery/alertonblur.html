@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur Alert</title>
+    <script src="./script/jquery.js"></script>
+</head>
+<body>
+    <div>
+        <input name="txt-field" type="text" value="">
+    </div>
+</body>
+<script>
+    $(document).ready(()=>{
+        $("input").blur(function(){
+            alert($(this).val())
+        })
+    })
+</script>
+</html>

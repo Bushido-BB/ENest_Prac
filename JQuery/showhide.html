@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide 5s</title>
+    <script src="./script/jquery.js"></script>
+</head>
+<body>
+    <span id="toggled">YOOOO</span>
+</body>
+<script>
+    $(document).ready(function(){
+        var toggled = $("#toggled")
+        toggled.css({"background-color": "orangered", "padding": "4px"})
+        toggled.hide(2000).show(2000)
+    })
+</script>
+</html>

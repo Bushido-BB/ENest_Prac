@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Validation</title>
+    <script src="./script/jquery.js"></script>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name"><br>
+        <label for="email">Email</label>
+        <input type="text" name="email"><br>
+        <label for="name">Password</label>
+        <input type="password" name="password"><br>
+        <input type="password" name="confpass"><br>
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button[type=submit]").click(function(){
+            event.preventDefault()
+            $("input").each(function(){
+                switch(this.name){
+                    case "name":
+                        if(!/^[a-zA-Z]+$/.test(this.value))
+                            alert("Invalid Name")
+                        break
+                    case "email":
+                        if(!/^\w+\@\w+\.\w{2,3}$/.test(this.value))
+                            alert("Invalid Email")
+                        break
+                    case "password":
+                        if($("input[name=password]").val() != $("input[name=confpass]").val())
+                            alert("Invalid Confirm Password")
+                        break
+                    // case "confpass":
+                    //     if($("thisut[name=password]").val() != $("thisut[name=confpass]").val())
+                    //         alert("Invlaid Confirm Password")
+                    //     break
+                }
+            })
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min from the Array</title>
+    <script src="./script/jquery.js"></script>
+</head>
+<body>
+    <div id="array"></div>
+    <span class="refresh"> REFRESH</span>
+    <div id="min">Find Min</div>
+</body>
+<script>
+    $(document).ready(function(){
+        let array = []
+        function refresh(){
+            array = []
+            for(let i = 0; i< 10; i++){
+                array.push(parseInt(Math.random()*100))
+            }
+        }
+        $(".refresh").click(function(){
+            $("#array").empty()
+            refresh()
+            $("#array").text(array)
+        })
+        $("#min").click(function(){
+            let min = array[0]
+            array.forEach(elem =>{
+                min = elem<min?elem:min
+            })
+            $(this).text("Min: " + min)
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort using JQuery</title>
+    <script src="./script/jquery.js"></script>
+</head>
+<body>
+    <ul id="list"></ul>
+    <span class="refresh">REFRESH</span>
+    <div id="sort">SORT</div>
+</body>
+<script>
+    $(document).ready(function(){
+        let _target = $("#list")
+        function refresh(){
+            _target.empty()
+            for(let i = 0; i<10; i++){
+                _target.html(function(i,o){
+                    return o + ("<li>"+parseInt(Math.random()*100)+"</li>")
+                })
+            }
+        }
+        $(".refresh").click(function(){
+            refresh()
+        })
+
+
+        $("#sort").click(function(){
+            $("#list li").sort(function(a,b){
+                let res = (parseInt(a.innerHTML) < parseInt(b.innerHTML) ? -1 : 1)
+                return res
+            }).appendTo("#list")
+        })
+
+        $("div,span").mousedown(function(){
+            $(this).css({"color": "red"})
+        })
+        $("div,span").mouseup(function(){
+            $(this).css({"color": "black"})
+        })
+    })
+</script>
+</html>

@@ -61,6 +61,7 @@ setUserData =(elem)=>{
     let edu = elem.education.options
     let options_list = user.education.split(',')
     for(opt of edu){
+        opt.selected = false
         if(options_list.includes(opt.value)){
             opt.selected = true
         }
@@ -133,6 +134,7 @@ validate = (id)=>{
                 mesg = "Choose a country first"
             break
         case "state":
+            console.log()
             if(!value)
                 mesg = "Choose a state"
             break

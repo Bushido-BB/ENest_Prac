@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Size</title>
+    <script src="./script/jquery.js"></script>
+    <style>
+        .larger{
+            font-size: xx-large;
+        }
+        div{
+            width:100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>HERO TEXT</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("div").click(function(){
+            $(this).toggleClass("larger")
+        })
+    })
+</script>
+</html>
