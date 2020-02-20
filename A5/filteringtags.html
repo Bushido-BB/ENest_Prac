@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering Tags</title>
+    <script src="../Javascript/jquery/jquery.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
+<body>
+    <input type="text" name="txt-filter">
+    <!-- <input type="text" name="txt-autofilter"> -->
+    <div id="filter-box">
+        <p>I am a Paragraph</p>
+        <input type="text" value="I am a Textbox"/>
+        <blockquote>I am a Blockquote</blockquote>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#filter-box").children().hide()
+        $("input[name=txt-filter]").keyup(function(){
+            $("#filter-box").children().hide()
+            let inp_value = $(this).val().toLowerCase().trim()
+            $("#filter-box *").filter(function() {
+                let val = ($(this).val()?$(this).val():$(this).text()).toLowerCase()
+                if(inp_value!="" && val.indexOf(inp_value) > -1){
+                    return true
+                }
+                return false
+            }).show()
+        })
+    })
+</script>
+</html>

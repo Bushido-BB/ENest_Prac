@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Interest</title>
+    <script src="../Javascript/jquery/jquery.js"></script>
+    <style>
+        .interest-box{
+            cursor: pointer;
+            margin:20px;
+            height: fit-content;
+        }
+        .interest-box > span{
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: monospace;
+            font-size: larger;
+            box-sizing: border-box;
+            color: white;
+            background-color: rgb(80, 106, 255);
+            padding: 5px;
+            margin: 2px;
+            border-radius: 4px;
+        }
+        .interest-box > span > span:nth-child(2):hover{
+            color:rgb(175, 187, 255)
+        }
+    </style>
+</head>
+<body>
+    <select name="slt-interests" id="">
+        <option class="removable" value="reading">Reading</option>
+        <option class="removable" value="listening">Listening</option>
+        <option class="removable" value="surfing">Surfing</option>
+        <option class="removable" value="dancing">Dancing</option>
+    </select>
+    <input type="text">
+    <button>+</button>
+    <div class="interest-box">
+        <!-- <span>
+            <span>text</span>
+            <span>X</span>
+        </span> -->
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        //On Option click
+        $(document).on("click", "select[name=slt-interests] .removable", function(){
+            let value = $(this).text()
+            $(".interest-box").append("<span><span>"+value+"</span><span> x </span></span>")
+            $(this).remove()
+        })
+        //On X click
+        $(document).on("click", ".interest-box span span:last-child", function(){
+            let value = $(this).siblings().text()
+            $("select[name=slt-interests]").append("<option class='removable' value='"+value+"'>"+value+"</option>")
+            $(this).parent().remove()
+        })
+        $("button").click(function(){
+            let value = $("input").val()
+            $("select[name=slt-interests]").append("<option class='removable' value='"+value+"'>"+value+"</option>")
+        })
+    })
+</script>
+</html>
