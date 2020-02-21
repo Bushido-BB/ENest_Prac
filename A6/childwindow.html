@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Window</title>
+</head>
+<body>
+    <button>Click</button>
+    <button>Click</button>
+    <button>Click</button>
+    <div id="yo-id"></div>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function initSequence(){
+        let target_div = document.getElementById("yo-id")
+        let buttons = document.querySelectorAll("button")
+        buttons[0].addEventListener("click", ()=>{
+            let frame = document.createElement("IFRAME")
+            frame.src = "http://www.wikipedia.org"
+            target_div.appendChild(frame)
+        })
+        buttons[1].addEventListener("click", ()=>{
+            window.open("http://www.wikipedia.org")
+        })
+        buttons[2].addEventListener("click", ()=>{
+            alert("Going to Wikipedia?")
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Before Exiting</title>
+</head>
+<body>
+    <input type="text"/>
+</body>
+<script>
+    let finalCheck = (field)=>{
+        event.preventDefault()
+        let clearance = false
+        switch(field.type){
+            case "text":
+                if(!(field && field.value.trim())){
+                    clearance = true
+                }
+                break
+            default:
+                clearance = true
+        }
+        if(!clearance){
+            return window.confirm("Do you really want to exit?")
+        }
+        return clearance
+    }
+    window.addEventListener("DOMContentLoaded", function initSequence(){
+        let input = document.querySelector("input")
+        window.addEventListener("beforeunload", (e)=>{
+            e.preventDefault()
+            finalCheck(input)
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check All & None</title>
+    <script src="../JQuery/script/jquery.js"></script>
+</head>
+<body>
+    <form action="" id="frm-checkboxes">
+        <input type="checkbox" name="checkbox1"><label for="checkbox1">checkbox1</label><br>
+        <input type="checkbox" name="checkbox2"><label for="checkbox2">checkbox2</label><br>
+        <input type="checkbox" name="checkbox3"><label for="checkbox3">checkbox3</label><br>
+        <button type="button" id="btn-all">CheckAll</button>
+        <button type="button" id="btn-none">Clear All</button>
+    </form>
+</body>
+<script>
+    $(document).ready(function(){
+        $("input[type=checkbox]").click(function(){
+            if($(this).prop("checked")){
+                $("input[type=checkbox]").prop("checked", false)
+                $(this).prop("checked", true)
+            }else{
+                $("input[type=checkbox]").prop("checked", false)
+            }
+        })
+    })
+</script>
+</html>

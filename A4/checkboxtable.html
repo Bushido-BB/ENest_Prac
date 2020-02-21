@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Table</title>
+    <style>
+        th,td{
+            border: 1px solid black;
+        }
+        .selected_row{
+            background-color: yellow;
+        }
+    </style>
+    <script src="../Javascript/jquery/jquery.js"></script>
+</head>
+<body>
+    <table>
+        <thead>
+            <th><input type="checkbox" name="" id=""> all</th>
+            <th>Name</th>
+            <th>Hobbies</th>
+            <th>Marks</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="" id=""></td>
+                <td><input type="text" name="" id=""><div>Guddu</div></td>
+                <td><input type="text" name="" id=""><div>Dance, Dance, Dance</div></td>
+                <td><input type="text" name="" id=""><div>100</div></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id=""><input type="checkbox" name="" id=""></td>
+                <td><input type="text" name="" id=""><div>Billa</div></td>
+                <td><input type="text" name="" id=""><div>Disco</div></td>
+                <td><input type="text" name="" id=""><div>100</div></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id=""><input type="checkbox" name="" id=""></td>
+                <td><input type="text" name="" id=""><div>Pamma</div></td>
+                <!-- <td contenteditable="true">Bhangra</td> -->
+                <td><input type="text" name="" id=""><div>Bhangra</div></td>
+                <td><input type="text" name="" id=""><div>100</div></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="btn-delete" type="button">Delete</button>
+    <div>
+        <span>Name: </span><span id="details-name"></span><br>
+        <span>Hobbies: </span><span id="details-hobbies"></span><br>
+        <span>Marks: </span><span id="details-marks"></span><br>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("td input[type=text]").hide()
+        $("input[type=checkbox]").click(function(){
+            if($(this).prop("checked")){
+                $("input[type=checkbox]").prop("checked", false)
+                $(this).prop("checked", true)
+            }else{
+                $("input[type=checkbox]").prop("checked", false)
+            }
+        })
+        $("tr").click(function(){
+            $("tr").removeClass("selected_row")
+            $(this).toggleClass("selected_row")
+        })
+        $("th input[type=checkbox]").click(function(){
+            if(!$(this).prop("checked")){
+                $("input[type=checkbox]").prop("checked", false)
+            }else{
+                $("input[type=checkbox]").prop("checked", true)
+            }
+        })
+        $("tr td input[type=checkbox]").click(function(){
+            if($(this).prop("checked")){
+                $("#details-name").text($(this).parent().siblings()[0].children[1].innerHTML)
+                $("#details-hobbies").text($(this).parent().siblings()[1].children[1].innerHTML)
+                $("#details-marks").text($(this).parent().siblings()[2].children[1].innerHTML)
+            }
+        })
+        $("td").click(function(){
+            let val = $(this).text()
+            $(this).children("input").show()
+            $(this).children("input").val($(this).children("div").text())
+            $(this).children("div").hide()
+            $(this).children("input").focus()
+        })
+        $("input[type=text]").blur(function(){
+            let val = $(this).val()
+            $(this).siblings("div").show()
+            $(this).siblings("div").text(val)
+            $(this).hide()
+        })
+        $("#btn-delete").click(function(){
+            $("tbody input[type='checkbox']").each(function(index,element){
+                if($(this).prop("checked")){
+                    $(this).parent().parent().remove()
+                }
+                // console.log($(this))
+            });
+        })
+    })
+</script>
+</html>

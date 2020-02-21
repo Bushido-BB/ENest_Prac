@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pic Upload</title>
+</head>
+<body>
+    <div id="img--container"></div>
+    <form action="" >
+        <input type="file" name="upl-file"/>
+    </form>
+</body>
+<script>
+    let uploadFile = (files)=>{
+        let parent  = document.getElementById("img--container")
+        if(files[0].type.indexOf("image") > -1){
+            let img = document.createElement("IMG")
+            img.src = URL.createObjectURL(files[0])
+            img.height = 300;
+            parent.innerHTML = ""
+            parent.appendChild(img)
+            img.onload = function(){
+                URL.revokeObjectURL(img.src)
+            }
+            event.target.value = ""
+        }else{
+            parent.innerHTML = "<div>NOT AN IMAGE</div>"
+        }
+    }
+    let initSequence = ()=>{
+        let files = null
+        document.querySelector("input").addEventListener("change", function(){
+            files = this.files
+            uploadFile(files)
+        })
+    }
+    document.addEventListener("DOMContentLoaded",initSequence())
+</script>
+</html>
