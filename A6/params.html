@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Parameters</title>
+    <style>
+        td,th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", ()=>{
+        let link = window.location.href
+        link = link.substring(link.indexOf('?')+1, link.length).split("&")
+        let headings = ""
+        let row = ""
+        link.forEach(element => {
+            let new_list = element.split("=")
+            headings += `<th>${new_list[0]}</th>`
+            row += `<td>${new_list[1]}</td>`
+        });
+        document.querySelector("thead").innerHTML = headings
+        document.querySelector("tbody").innerHTML = "<tr>"+row+"</tr>"
+    })
+</script>
+</html>
